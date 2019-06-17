@@ -1,0 +1,55 @@
+<html><head>
+
+<script>
+
+function select1change(){
+var selectID = document.form.select1.selectedIndex;
+document.form.select2.selectedIndex = 0; //第二个drop 获得焦点
+
+
+if( selectID == 0){
+document.form.select2.length = 1;//清空第二个drop 的值
+document.form.select2.options[0].text = "请选择";
+document.form.select2.options[0].value = "0";
+
+}
+else if (selectID == 1){
+document.form.select2.length = 4;
+document.form.select2.options[0].text = "请选择";
+document.form.select2.options[0].value = "0";
+document.form.select2.options[1].text = "11";
+document.form.select2.options[1].value = "1";
+document.form.select2.options[2].text = "22";
+document.form.select2.options[2].value = "2";
+document.form.select2.options[3].text = "33";
+document.form.select2.options[3].value = "3";
+}
+else{
+document.form.select2.length = 3;
+document.form.select2.options[0].text = "请选择";
+document.form.select2.options[0].value = "0";
+document.form.select2.options[1].text = "海城";
+document.form.select2.options[1].value = "1";
+document.form.select2.options[2].text = "西柳";
+document.form.select2.options[2].value = "2";
+
+}
+
+}
+</script>
+</head><body>
+
+<form name="form">
+<select name="select1"  onChange="select1change()">
+  <option value ="--">请选择</option>
+  <option value ="1">1</option>
+  <option value="2">2</option>
+</select>
+
+<select name="select2">
+ 
+</select>
+</form>
+</body>
+
+</html>
